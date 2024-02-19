@@ -1,0 +1,18 @@
+﻿@model WeatherModel[]
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @foreach(var weather in Model)
+    {
+        <div>
+            <h2>@weather.Summary</h2>
+            <p>Humidity: @weather.Date</p>
+            <p>Temperature (C): @weather.TemperatureC</p>
+            <p>Temperature (F): @weather.TemperatureF</p>
+            <hr/>
+        </div>
+    }
+</div>
